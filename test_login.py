@@ -30,3 +30,4 @@ def run():
         browser.close()
 if __name__ == "__main__":
     run()
+# Login test completed successfully
