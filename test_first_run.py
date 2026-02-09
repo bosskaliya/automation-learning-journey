@@ -7,8 +7,8 @@ def run():
         page = browser.new_page()
 
         # 2. Go to website
-        print("Navigating to Google...")
-        page.goto("https://www.google.com/")
+        print("Navigating to Livescore...")
+        page.goto("https://www.livescore.com/en/")
 
         # 3. Get the title
         title = page.title()
