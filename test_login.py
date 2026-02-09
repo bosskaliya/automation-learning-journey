@@ -18,7 +18,8 @@ def run():
         page.fill("#password", "secret_sauce")
         # 5. INTERACTION: Click the Login Button
         print("Clicking Login...")
-        page.click("#login-button")
+        # page.click("#login-button")
+        page.click('[data-test="login-button"]')
 
         # 6. VERIFICATION: Did we succeed?
         # We check if the URL contains "inventory"
