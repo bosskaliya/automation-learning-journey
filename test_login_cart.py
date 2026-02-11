@@ -5,7 +5,9 @@ def run():
         browser = p.chromium.launch(headless=False, slow_mo=1000)
         page = browser.new_page()
 
-        print("Navigation to SauceDemo...")
+
+        # Page definition
+        print("Navigating to SauceDemo...")
         page.goto("https://www.saucedemo.com/")
 
         #Login Intersection
