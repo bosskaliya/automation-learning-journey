@@ -27,17 +27,21 @@ def run():
         # print(f"Found {count} item to add.")
         # Until here
 
+        # 1. Find all the product cards (The Parents)
         items = page.locator(".inventory_item")
+        # 2. Count them so we know how many times to loop
         count = items.count()
         print(f"Found {count} items")
 
         for i in range(count):
-            # Get the card at index i
+            # 3. Pick the specific card for this round (Focus only on this one)
             current_item = items.nth(i)
 
             # Find the "Add to cart: button INSIDE this specific card
             # We use specific text so we don't accidentally click "Remove" if we run this twice
+            # 4. Find the button INSIDE that specific card (The Child)
             add_button = current_item.locator("button:has-text('Add to cart')")
+            # add_button = page.locator("button:has-text('Add to cart')")
 
             # Click it
             add_button.click()
